@@ -1,0 +1,383 @@
+
+                </div>
+            </div>
+            
+            <!-- Users Tab -->
+            <div class="tab-pane fade" id="users" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Users Management</h2>
+                        <div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                                <i class="bi bi-plus"></i> Add User
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search and Filter -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Search users...">
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option selected>Filter by role</option>
+                                        <option>Admin</option>
+                                        <option>Editor</option>
+                                        <option>User</option>
+                                        <option>Guest</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option selected>Filter by status</option>
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                        <option>Suspended</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary w-100">Filter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Users Table -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-container">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="selectAll">
+                                                </div>
+                                            </th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Status</th>
+                                            <th>Joined Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </td>
+                                            <td>John Smith</td>
+                                            <td>john@example.com</td>
+                                            <td>Admin</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td>Jan 15, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-pencil"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </td>
+                                            <td>Alice Johnson</td>
+                                            <td>alice@example.com</td>
+                                            <td>Editor</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td>Feb 20, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-pencil"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </td>
+                                            <td>Robert Brown</td>
+                                            <td>robert@example.com</td>
+                                            <td>User</td>
+                                            <td><span class="badge bg-warning text-dark">Inactive</span></td>
+                                            <td>Mar 10, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-pencil"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </td>
+                                            <td>Emily Davis</td>
+                                            <td>emily@example.com</td>
+                                            <td>User</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td>Apr 5, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-pencil"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </td>
+                                            <td>Michael Wilson</td>
+                                            <td>michael@example.com</td>
+                                            <td>Guest</td>
+                                            <td><span class="badge bg-danger">Suspended</span></td>
+                                            <td>May 12, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1"><i class="bi bi-pencil"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation" class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other tabs content here -->
+
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.getElementById('toggleSidebar');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const content = document.getElementById('content');
+            
+            // Toggle sidebar function
+            function toggleSidebar() {
+                if (window.innerWidth <= 767.98) {
+                    sidebar.classList.toggle('hidden');
+                    content.classList.toggle('full-width');
+                    
+                    if (sidebar.classList.contains('hidden')) {
+                        toggleBtn.classList.add('sidebar-hidden');
+                    } else {
+                        toggleBtn.classList.remove('sidebar-hidden');
+                    }
+                } else {
+                    sidebar.classList.toggle('expanded');
+                    if (sidebar.classList.contains('expanded')) {
+                        toggleBtn.innerHTML = '<i class="bi bi-chevron-left"></i>';
+                    } else {
+                        toggleBtn.innerHTML = '<i class="bi bi-chevron-right"></i>';
+                    }
+                }
+            }
+            
+            // Toggle sidebar event listeners
+            toggleBtn.addEventListener('click', toggleSidebar);
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', toggleSidebar);
+            }
+            
+            // Handle tab navigation
+            const tabLinks = document.querySelectorAll('a[data-bs-toggle="tab"]');
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // If on mobile, close the sidebar after clicking a tab
+                    if (window.innerWidth <= 767.98) {
+                        sidebar.classList.add('hidden');
+                        content.classList.add('full-width');
+                        toggleBtn.classList.add('sidebar-hidden');
+                    }
+                    
+                    // Update active states for sidebar items
+                    document.querySelectorAll('.sidebar-menu > li').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    const parentLi = this.closest('li');
+                    if (parentLi && !parentLi.classList.contains('has-submenu')) {
+                        parentLi.classList.add('active');
+                    }
+                });
+            });
+            
+            // Handle dropdown menus - completely rewritten for simplicity
+            document.querySelectorAll('.has-submenu > a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const parentLi = this.parentElement;
+                    const submenu = parentLi.querySelector('.sidebar-submenu');
+                    const dropdownIcon = this.querySelector('.dropdown-icon');
+                    
+                    // Close all other submenus
+                    document.querySelectorAll('.has-submenu').forEach(item => {
+                        if (item !== parentLi) {
+                            item.classList.remove('open');
+                            const otherSubmenu = item.querySelector('.sidebar-submenu');
+                            if (otherSubmenu) {
+                                otherSubmenu.style.display = 'none';
+                            }
+                            const otherIcon = item.querySelector('.dropdown-icon');
+                            if (otherIcon) {
+                                otherIcon.style.transform = 'rotate(0)';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current submenu
+                    parentLi.classList.toggle('open');
+                    if (parentLi.classList.contains('open')) {
+                        submenu.style.display = 'block';
+                        if (dropdownIcon) {
+                            dropdownIcon.style.transform = 'rotate(90deg)';
+                        }
+                    } else {
+                        submenu.style.display = 'none';
+                        if (dropdownIcon) {
+                            dropdownIcon.style.transform = 'rotate(0)';
+                        }
+                    }
+                });
+            });
+            
+            // Mobile dropdown handlers
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const parentLi = this.parentElement;
+                    const submenu = parentLi.querySelector('.sidebar-submenu');
+                    const icon = this.querySelector('i');
+                    
+                    // Close other submenus
+                    document.querySelectorAll('.has-submenu').forEach(item => {
+                        if (item !== parentLi) {
+                            item.classList.remove('open');
+                            const otherSubmenu = item.querySelector('.sidebar-submenu');
+                            if (otherSubmenu) {
+                                otherSubmenu.style.display = 'none';
+                            }
+                            const otherIcon = item.querySelector('.mobile-dropdown i');
+                            if (otherIcon) {
+                                otherIcon.style.transform = 'rotate(0)';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current submenu
+                    parentLi.classList.toggle('open');
+                    if (parentLi.classList.contains('open')) {
+                        submenu.style.display = 'block';
+                        if (icon) {
+                            icon.style.transform = 'rotate(90deg)';
+                        }
+                    } else {
+                        submenu.style.display = 'none';
+                        if (icon) {
+                            icon.style.transform = 'rotate(0)';
+                        }
+                    }
+                });
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                // Update mobile dropdown visibility
+                const isExpanded = sidebar.classList.contains('expanded');
+                const isDesktop = window.innerWidth > 991.98;
+                
+                document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                    dropdown.style.display = (isExpanded || isDesktop) ? 'none' : 'flex';
+                });
+                
+                document.querySelectorAll('.dropdown-icon').forEach(icon => {
+                    icon.style.display = (isExpanded || isDesktop) ? 'block' : 'none';
+                });
+                
+                // Ensure proper sidebar state on desktop
+                if (window.innerWidth > 991.98) {
+                    sidebar.classList.add('expanded');
+                    toggleBtn.innerHTML = '<i class="bi bi-chevron-left"></i>';
+                } else if (window.innerWidth <= 991.98 && window.innerWidth > 767.98) {
+                    sidebar.classList.remove('expanded');
+                    toggleBtn.innerHTML = '<i class="bi bi-chevron-right"></i>';
+                }
+            });
+            
+            // Handle logout button
+            const logoutBtn = document.getElementById('logoutBtn');
+            const mobileLogoutBtn = document.getElementById('mobileLogoutBtn');
+            
+            function handleLogout(e) {
+                e.preventDefault();
+                alert('Logout functionality would go here.');
+            }
+            
+            if (logoutBtn) logoutBtn.addEventListener('click', handleLogout);
+            if (mobileLogoutBtn) mobileLogoutBtn.addEventListener('click', handleLogout);
+            
+            // Set initial sidebar state based on screen size
+            if (window.innerWidth > 991.98) {
+                sidebar.classList.add('expanded');
+                toggleBtn.innerHTML = '<i class="bi bi-chevron-left"></i>';
+            } else {
+                sidebar.classList.remove('expanded');
+                toggleBtn.innerHTML = '<i class="bi bi-chevron-right"></i>';
+                
+                // Update dropdown visibility for mobile
+                document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                    dropdown.style.display = 'flex';
+                });
+                
+                document.querySelectorAll('.dropdown-icon').forEach(icon => {
+                    icon.style.display = 'none';
+                });
+            }
+            
+            // Trigger resize event to set initial states
+            window.dispatchEvent(new Event('resize'));
+        });
+    </script>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9641b76b35c445ed',t:'MTc1MzM0MjI3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+    </script>
+
+</body>
+</html>

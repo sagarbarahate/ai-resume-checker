@@ -1,1 +1,178 @@
+<%- include("navbar.ejs") %>
+
 <h1>Admin Home Open</h1>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Dashboard</h2>
+    <div>
+        <button class="btn btn-primary">
+            <i class="bi bi-plus"></i> New Report
+        </button>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row">
+    <div class="col-md-6 col-lg-3 mb-3">
+        <div class="stat-card bg-gradient-1">
+            <h3>2,450</h3>
+            <p>Total Users</p>
+            <i class="bi bi-people"></i>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+        <div class="stat-card bg-gradient-2">
+            <h3>$12,500</h3>
+            <p>Monthly Revenue</p>
+            <i class="bi bi-currency-dollar"></i>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+        <div class="stat-card bg-gradient-3">
+            <h3>156</h3>
+            <p>New Orders</p>
+            <i class="bi bi-cart"></i>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+        <div class="stat-card bg-gradient-4">
+            <h3>89%</h3>
+            <p>Satisfaction Rate</p>
+            <i class="bi bi-emoji-smile"></i>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Recent Orders -->
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="card-title mb-0">Recent Orders</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-container">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-0045</td>
+                                <td>John Smith</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>Oct 21, 2023</td>
+                                <td>$120.00</td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-0044</td>
+                                <td>Alice Johnson</td>
+                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                <td>Oct 20, 2023</td>
+                                <td>$75.50</td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-0043</td>
+                                <td>Robert Brown</td>
+                                <td><span class="badge bg-info">Processing</span></td>
+                                <td>Oct 19, 2023</td>
+                                <td>$246.00</td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-0042</td>
+                                <td>Emily Davis</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>Oct 18, 2023</td>
+                                <td>$89.99</td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-0041</td>
+                                <td>Michael Wilson</td>
+                                <td><span class="badge bg-danger">Cancelled</span></td>
+                                <td>Oct 17, 2023</td>
+                                <td>$145.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Activity -->
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="card-title mb-0">Recent Activity</h5>
+            </div>
+            <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="me-3">
+                            <span class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <i class="bi bi-person"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="mb-0">New user registered</p>
+                            <small class="text-muted">5 minutes ago</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="me-3">
+                            <span class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <i class="bi bi-cart"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="mb-0">New order placed</p>
+                            <small class="text-muted">30 minutes ago</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="me-3">
+                            <span class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <i class="bi bi-exclamation-triangle"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="mb-0">Server warning</p>
+                            <small class="text-muted">1 hour ago</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="me-3">
+                            <span class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <i class="bi bi-gear"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="mb-0">Settings updated</p>
+                            <small class="text-muted">2 hours ago</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="me-3">
+                            <span class="bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <i class="bi bi-x-circle"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="mb-0">Order #2345 cancelled</p>
+                            <small class="text-muted">3 hours ago</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("footer.ejs") %>

@@ -19,6 +19,9 @@ app.use(express.static("public/"));
 app.use("/",userroutes);
 app.use("/admin",adminroute);
 
-app.listen(1000);
+let port = 1000;
+app.listen(port,()=>{
+    console.log("This Server running on this port: http://localhost:"+`${port}`);
+});
 
 
